@@ -9,7 +9,8 @@
   "private": false,
   "scripts": {
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -p ./tsconfig.json"
   },
   "jest": {
     "transform": {

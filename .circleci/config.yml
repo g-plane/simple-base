@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+      - image: circleci/node:6
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "yarn.lock" }}
+            - v1-dep
+      - run: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-deps-{{ checksum "yarn.lock" }}
+      - run:
+          name: Test
+          command: yarn run test
+
+  lint:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "yarn.lock" }}
+            - v1-dep
+      - run: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-deps-{{ checksum "yarn.lock" }}
+      - run:
+          name: Linting
+          command: yarn run lint
+
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - build
+      - lint
