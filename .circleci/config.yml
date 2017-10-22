@@ -24,10 +24,32 @@ jobs:
           paths:
             - .
 
-  build:
+  test_on_node4:
+    <<: *defaults
+    docker:
+      - image: circleci/node:4
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Test
+          command: yarn test
+
+  test_on_node6:
     <<: *defaults
     docker:
       - image: circleci/node:6
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Test
+          command: yarn test
+
+  test_on_node8:
+    <<: *defaults
+    docker:
+      - image: circleci/node:8
     steps:
       - attach_workspace:
           at: ~/repo
@@ -52,7 +74,13 @@ workflows:
   lint_and_test:
     jobs:
       - install
-      - build:
+      - test_on_node4:
+          requires:
+            - install
+      - test_on_node6:
+          requires:
+            - install
+      - test_on_node8:
           requires:
             - install
       - lint:
