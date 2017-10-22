@@ -1,10 +1,13 @@
 version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+
 jobs:
-  build:
+  install:
+    <<: *defaults
     docker:
       - image: circleci/node:8
-      - image: circleci/node:6
-    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
@@ -16,32 +19,42 @@ jobs:
           paths:
             - node_modules
           key: v1-deps-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - .
+
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/node:6
+    steps:
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Test
-          command: yarn run test
+          command: yarn test
 
   lint:
+    <<: *defaults
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ checksum "yarn.lock" }}
-            - v1-dep
-      - run: yarn
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-deps-{{ checksum "yarn.lock" }}
+      - attach_workspace:
+          at: ~/repo
       - run:
           name: Linting
-          command: yarn run lint
+          command: yarn lint
 
 workflows:
   version: 2
   lint_and_test:
     jobs:
-      - build
-      - lint
+      - install
+      - build:
+          requires:
+            - install
+      - lint:
+          requires:
+            - install
