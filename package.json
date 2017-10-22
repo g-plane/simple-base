@@ -2,7 +2,7 @@
   "name": "simple-base",
   "version": "0.1.0",
   "description": "A simple base36/base58 converter.",
-  "main": "index.js",
+  "main": "dist/simple-base.js",
   "repository": "https://github.com/g-plane/simple-base",
   "author": "GPlane",
   "license": "Apache-2.0",
