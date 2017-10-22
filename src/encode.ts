@@ -1,7 +1,7 @@
 import alphabetMap from './alphabet/index'
 import alphabet from './alphabet/constants'
 
-export default function (source: string, base = 64) {
+export default function (source: string, base: number) {
   if (source === '') {
     return ''
   }

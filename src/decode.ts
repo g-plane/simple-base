@@ -1,6 +1,6 @@
 import alphabetMap from './alphabet/index'
 
-export default function (encoded: string, base = 64) {
+export default function (encoded: string, base: number) {
   const bytes = [0]
   let c: string, carry, i = 0, j
 
