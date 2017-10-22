@@ -23,7 +23,7 @@ export default function (source: string, base: number) {
       digits[j] += carry
       carry = (digits[j] / base) | 0
       digits[j] %= base
-      ++j
+      j++
     }
     while (carry) {
       digits.push(carry % base)
