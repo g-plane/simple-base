@@ -1,4 +1,3 @@
-import alphabetMap from './alphabet/index'
 import alphabet from './alphabet/constants'
 
 export default function (source: string, base: number) {
