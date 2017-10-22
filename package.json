@@ -1,7 +1,7 @@
 {
   "name": "simple-base",
   "version": "0.1.0",
-  "description": "A simple base-x converter.",
+  "description": "A simple base36/base58 converter.",
   "main": "index.js",
   "repository": "https://github.com/g-plane/simple-base",
   "author": "GPlane",
