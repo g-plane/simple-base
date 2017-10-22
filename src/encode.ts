@@ -22,13 +22,13 @@ export default function (source: string, base: number) {
     j = 0
     while (j < digits.length) {
       digits[j] += carry
-      carry = (digits[j] / 36) | 0
-      digits[j] %= 36
+      carry = (digits[j] / base) | 0
+      digits[j] %= base
       ++j
     }
     while (carry) {
-      digits.push(carry % 36)
-      carry = (carry / 36) | 0
+      digits.push(carry % base)
+      carry = (carry / base) | 0
     }
     i++
   }
