@@ -1,6 +1,7 @@
 # Simple Base
 
-![![Build Status]()](https://circleci.com/gh/g-plane/simple-base.svg?style=shield)
+[![codecov](https://img.shields.io/codecov/c/github/g-plane/simple-base.svg?style=flat-square)](https://codecov.io/gh/g-plane/simple-base)
+![![Build Status]()](https://img.shields.io/circleci/project/github/g-plane/simple-base.svg?style=flat-square)
 
 Simple Base is a simple library to encode or decode with base36/base58.
 
