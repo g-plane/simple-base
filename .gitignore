@@ -1,5 +1,6 @@
 node_modules
 dist
+coverage
 src/**/*.js
 yarn-error.log
 .rpt2_cache

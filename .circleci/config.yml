@@ -55,7 +55,8 @@ jobs:
           at: ~/repo
       - run:
           name: Test
-          command: yarn test
+          command: yarn test:coverage
+      - run: yarn run codecov
 
   lint:
     <<: *defaults
