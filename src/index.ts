@@ -15,8 +15,8 @@ const lib: { [x: string]: Walker | { 'encode': Walker, 'decode': Walker } } = {
 
 Object.keys(alphabet).forEach(base => {
   lib[`base${base}`] = {
-    encode: curry(encode, parseInt(base)),
-    decode: curry(decode, parseInt(base))
+    encode: curry(encode, parseInt(base, 10)),
+    decode: curry(decode, parseInt(base, 10))
   }
 })
 

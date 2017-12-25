@@ -8,7 +8,9 @@ export default function (source: string, base: number) {
   const buffer = source.split('').map(char => char.charCodeAt(0))
 
   const digits = [0]
-  let carry, i = 0, j
+  let carry
+  let i = 0
+  let j
 
   while (i < buffer.length) {
     j = 0

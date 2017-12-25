@@ -2434,6 +2434,10 @@ tslib@^1.7.1:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.8.0.tgz#dc604ebad64bcbf696d613da6c954aa0e7ea1eb6"
 
+tslint-config-gplane@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tslint-config-gplane/-/tslint-config-gplane-1.1.0.tgz#67f7b30e6301d4ab8d6b477393285a0850db33af"
+
 tslint@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.8.0.tgz#1f49ad5b2e77c76c3af4ddcae552ae4e3612eb13"

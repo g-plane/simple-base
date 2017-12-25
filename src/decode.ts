@@ -2,7 +2,10 @@ import alphabetMap from './alphabet/index'
 
 export default function (encoded: string, base: number) {
   const bytes = [0]
-  let c: string, carry, i = 0, j
+  let c: string
+  let carry
+  let i = 0
+  let j
 
   if (encoded.length === 0) {
     return ''
