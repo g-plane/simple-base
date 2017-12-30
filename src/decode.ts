@@ -3,9 +3,9 @@ import alphabetMap from './alphabet/index'
 export default function (encoded: string, base: number) {
   const bytes = [0]
   let c: string
-  let carry
+  let carry: number
   let i = 0
-  let j
+  let j: number
 
   if (encoded.length === 0) {
     return ''
