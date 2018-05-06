@@ -6,7 +6,7 @@
   "typings": "./index.d.ts",
   "repository": "https://github.com/g-plane/simple-base",
   "author": "GPlane",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "build": "rollup -c",

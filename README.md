@@ -74,3 +74,7 @@ const decoded = SimpleBase.base36.decode('Cn8eVZg')
 ## TypeScript Support
 
 Type definitions are included.
+
+## License
+
+MIT License © [Pig Fang](https://gplane.win/)
