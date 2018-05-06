@@ -1,6 +1,6 @@
 {
   "name": "simple-base",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple base36/base58 converter.",
   "main": "dist/simple-base.js",
   "typings": "./index.d.ts",
