@@ -43,11 +43,5 @@ export default function (encoded: string, base: number) {
     i++
   }
 
-  i = 0
-  while (encoded[i] === '1' && i < encoded.length - 1) {
-    bytes.push(0)
-    i++
-  }
-
   return String.fromCharCode(...(bytes.reverse()))
 }
