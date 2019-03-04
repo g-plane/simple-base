@@ -1,5 +1,5 @@
-import encode from '../src/encode'
-import decode from '../src/decode'
+import { encode } from '../src/encode'
+import { decode } from '../src/decode'
 
 test('base36 encode', () => {
   expect(encode('', 36)).toBe('')

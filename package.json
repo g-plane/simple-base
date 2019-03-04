@@ -11,35 +11,26 @@
   "scripts": {
     "build": "rollup -c",
     "test": "jest",
-    "test:coverage": "jest --coverage --coverageDirectory ./coverage/",
     "lint": "eslint . -f=beauty --ext=.ts,.js"
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
+      "^.+\\.ts$": "ts-jest"
+    }
   },
   "devDependencies": {
     "@gplane/tsconfig": "^1.0.0",
-    "@types/jest": "^21.1.4",
+    "@types/jest": "^24.0.9",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
     "eslint": "^5.15.0",
     "eslint-config-gplane": "^5.1.2",
     "eslint-formatter-beauty": "^3.0.0",
-    "jest": "^21.2.1",
+    "jest": "^24.1.0",
     "rollup": "^0.50.0",
     "rollup-plugin-typescript2": "^0.7.0",
     "rollup-plugin-uglify": "^2.0.1",
-    "ts-jest": "^21.1.3",
+    "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
   }
 }
