@@ -12,7 +12,6 @@
     "build": "rollup -c",
     "test": "jest",
     "test:coverage": "jest --coverage --coverageDirectory ./coverage/",
-    "codecov": "codecov",
     "lint": "eslint . -f=beauty --ext=.ts,.js"
   },
   "jest": {
@@ -33,7 +32,6 @@
     "@types/jest": "^21.1.4",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
-    "codecov": "^3.0.0",
     "eslint": "^5.15.0",
     "eslint-config-gplane": "^5.1.2",
     "eslint-formatter-beauty": "^3.0.0",
