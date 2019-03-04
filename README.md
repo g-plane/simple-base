@@ -32,7 +32,7 @@ const SimpleBase = require('simple-base')
 Use ES2015 Modules:
 
 ```javascript
-import SimpleBase from 'simple-base'
+import * as SimpleBase from 'simple-base'
 ```
 
 ### Base36
@@ -70,10 +70,6 @@ const decoded = SimpleBase.decode('Cn8eVZg', 58)
 // or
 const decoded = SimpleBase.base36.decode('Cn8eVZg')
 ```
-
-## TypeScript Support
-
-Type definitions are included.
 
 ## License
 
