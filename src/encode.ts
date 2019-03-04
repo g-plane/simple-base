@@ -1,6 +1,6 @@
 import alphabet from './alphabet/constants'
 
-export default function (source: string, base: number) {
+export function encode(source: string, base: 36 | 58) {
   if (source === '') {
     return ''
   }
@@ -40,6 +40,8 @@ export default function (source: string, base: number) {
     i++
   }
 
-  return digits.reverse().map(digit => alphabet[base][digit])
+  return digits
+    .reverse()
+    .map(digit => alphabet[base][digit])
     .join('')
 }

@@ -1,23 +1,17 @@
-import encode from './encode'
-import decode from './decode'
-import alphabet from './alphabet/constants'
+import { encode } from './encode'
+import { decode } from './decode'
 
-type Walker = (str: string, base: number) => string
-
-function curry(fn: Walker, base: number) {
+function curry(fn: (str: string, base: 36 | 58) => string, base: 36 | 58) {
   return (param: string) => fn(param, base)
 }
 
-const lib: { [x: string]: Walker | { 'encode': Walker, 'decode': Walker } } = {
-  encode,
-  decode,
+export * from './encode'
+export * from './decode'
+export const base36 = {
+  encode: curry(encode, 36),
+  decode: curry(decode, 36),
 }
-
-Object.keys(alphabet).forEach(base => {
-  lib[`base${base}`] = {
-    encode: curry(encode, parseInt(base)),
-    decode: curry(decode, parseInt(base)),
-  }
-})
-
-export default lib
+export const base58 = {
+  encode: curry(encode, 58),
+  decode: curry(decode, 58),
+}
