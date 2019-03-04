@@ -2,8 +2,7 @@
   "name": "simple-base",
   "version": "0.2.1",
   "description": "A simple base36/base58 converter.",
-  "main": "dist/simple-base.js",
-  "typings": "./index.d.ts",
+  "main": "dist/index.js",
   "repository": "https://github.com/g-plane/simple-base",
   "author": "GPlane",
   "license": "MIT",
@@ -27,9 +26,9 @@
     "eslint-config-gplane": "^5.1.2",
     "eslint-formatter-beauty": "^3.0.0",
     "jest": "^24.1.0",
-    "rollup": "^0.50.0",
-    "rollup-plugin-typescript2": "^0.7.0",
-    "rollup-plugin-uglify": "^2.0.1",
+    "rollup": "^1.4.1",
+    "rollup-plugin-typescript2": "^0.19.3",
+    "rollup-plugin-uglify": "^6.0.2",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
   }
