@@ -9,6 +9,7 @@
   "private": false,
   "scripts": {
     "build": "rollup -c",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "lint": "eslint . -f=beauty --ext=.ts,.js"
   },
