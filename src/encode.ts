@@ -40,5 +40,6 @@ export default function (source: string, base: number) {
     i++
   }
 
-  return digits.reverse().map(digit => alphabet[base][digit]).join('')
+  return digits.reverse().map(digit => alphabet[base][digit])
+    .join('')
 }

@@ -1,8 +1,0 @@
-{
-  "extends": "tslint-config-gplane",
-  "rules": {
-    "no-bitwise": false,
-    "no-magic-numbers": false,
-    "number-literal-format": false
-  }
-}

@@ -5,11 +5,11 @@ export default {
   input: 'src/index.ts',
   output: {
     file: 'dist/simple-base.js',
-    format: 'umd'
+    format: 'umd',
   },
   name: 'SimpleBase',
   plugins: [
     typescript(),
-    uglify()
-  ]
+    uglify(),
+  ],
 }

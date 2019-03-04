@@ -43,5 +43,5 @@ export default function (encoded: string, base: number) {
     i++
   }
 
-  return String.fromCharCode(...(bytes.reverse()))
+  return String.fromCharCode(...bytes.reverse())
 }

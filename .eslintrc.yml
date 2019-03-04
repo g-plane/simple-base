@@ -1,0 +1,6 @@
+extends:
+  - gplane
+  - gplane/typescript
+
+rules:
+  no-plusplus: 0
