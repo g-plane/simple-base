@@ -59,7 +59,7 @@ Encoding:
 ```javascript
 const encoded = SimpleBase.encode('hello', 58)
 // or
-const encoded = SimpleBase.base36.encode('hello')
+const encoded = SimpleBase.base58.encode('hello')
 ```
 
 Decoding:
@@ -67,7 +67,7 @@ Decoding:
 ```javascript
 const decoded = SimpleBase.decode('Cn8eVZg', 58)
 // or
-const decoded = SimpleBase.base36.decode('Cn8eVZg')
+const decoded = SimpleBase.base58.decode('Cn8eVZg')
 ```
 
 ## License
